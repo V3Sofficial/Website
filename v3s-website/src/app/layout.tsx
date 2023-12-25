@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import React from "react";
-import styles from "./page.module.scss";
+import Header from "@/app/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,9 +73,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={[inter.className, styles.withBackground].join(" ")}>
+      <body className={[inter.className].join(" ")}>
         <div className="relative">
-          <div className={styles.content}>{children}</div>
+          <Header></Header>
+          <div>{children}</div>
         </div>
       </body>
     </html>
