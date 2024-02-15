@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9da9d325-aae9-411c-a761-e2baad9962bc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +49,8 @@
     "code.cleanup.on.save": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "21.1.0",
+    "javascript.nodejs.core.library.typings.version": "20.11.17",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,9 +62,10 @@
     "npm.dev.executor": "Run",
     "npm.install prettier.executor": "Run",
     "npm.install sass.executor": "Run",
+    "npm.update.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/jules/Library/Mobile Documents/com~apple~CloudDocs/Second Brain/Business/V3S/Web Appearance/Website/v3s-website/node_modules/prettier",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "watcher.settings",
+    "settings.editor.selected.configurable": "settings.javascript.linters.tslint",
     "ts.external.directory.path": "/Users/jules/Library/Mobile Documents/com~apple~CloudDocs/Second Brain/Business/V3S/Web Appearance/Website/v3s-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -102,6 +107,9 @@
       <workItem from="1703355848361" duration="1640000" />
       <workItem from="1703417313037" duration="2730000" />
       <workItem from="1703497883188" duration="2275000" />
+      <workItem from="1707826852180" duration="8000" />
+      <workItem from="1707828096339" duration="724000" />
+      <workItem from="1707829122632" duration="1272000" />
     </task>
     <servers />
   </component>
