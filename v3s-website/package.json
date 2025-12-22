@@ -1,7 +1,12 @@
 {
   "name": "v3s-website",
-  "version": "0.1.0",
+  "author": "Julian Schumacher",
+  "version": "1.0.0",
   "private": true,
+  "repository": "https://github.com/V3Sofficial/Website",
+  "maintainers": [
+    "Julian Schumacher"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,14 +22,14 @@
     "sass": "^1.69.5"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "postcss": "^8",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "^8.5.6",
     "tailwindcss": "^4.1.16",
-    "typescript": "^5"
+    "typescript": "latest"
   }
 }
