@@ -76,7 +76,7 @@ export default function RootLayout({
       <body className={[inter.className].join(" ")}>
         <div className="relative">
           <Header></Header>
-          <div>{children}</div>
+          <main style={{ paddingTop: "6rem" }}>{children}</main>
         </div>
       </body>
     </html>

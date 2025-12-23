@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+body {
+  padding: 0;
+  margin: 0 0 3rem;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: left;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+h2 {
+  font-size: 24px;
+  padding-bottom: 0.75rem;
+  padding-top: 1.5rem;
+}
+
+h3 {
+  font-size: 20px;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+
+h4 {
+  font-size: 18px;
+  padding-bottom: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+a {
+  text-decoration: underline;
+}
+
+main {
+  text-align: left;
+  margin: auto;
+  max-width: 800px;
+}
