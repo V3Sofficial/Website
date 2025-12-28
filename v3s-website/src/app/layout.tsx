@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import React from "react";
 import Header from "@/app/header";
-import "./globals.scss";
+import "./globals.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     "Security Systems",
     "Safety & Security Systems",
   ],
-  authors: { name: "Julian Schumacher", url: "https://julianschumacher.dev" },
+  authors: { name: "Julian Schumacher", url: "https://juliandevelops.com" },
   creator: "V3S Developmnet",
   formatDetection: {
     email: true,
@@ -76,7 +77,7 @@ export default function RootLayout({
       <body className={[inter.className].join(" ")}>
         <div className="relative">
           <Header></Header>
-          <main style={{ paddingTop: "6rem" }}>{children}</main>
+          <main>{children}</main>
         </div>
       </body>
     </html>

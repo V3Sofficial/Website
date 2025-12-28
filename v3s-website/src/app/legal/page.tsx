@@ -17,10 +17,10 @@ export default function LegalPage() {
             </p>
             <ul>
                 <li>
-                    <a href="https://vercel.com/legal/privacy-policy">Hoster</a>
+                    <Link href="https://vercel.com/legal/privacy-policy">Hoster</Link>
                 </li>
                 <li>
-                    <a href="https://www.strato.de/datenschutz/">Provider</a>
+                    <Link href="https://www.strato.de/datenschutz/">Provider</Link>
                 </li>
             </ul>
         </main>

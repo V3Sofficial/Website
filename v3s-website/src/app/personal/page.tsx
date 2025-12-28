@@ -1,6 +1,11 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
 
+export const metadata = {
+  title: "V3S - Personal Solutions",
+  description: "Personal solutions provided by V3S for everyone.",
+};
+
 export default function PersonalPage() {
   return (
     <main>
@@ -13,7 +18,7 @@ export default function PersonalPage() {
       <ul>
         <li>
           <div className={styles.linkContainer}>
-            <Link href="/personal/protect-pass" className={styles.link}>
+            <Link href="/personal/protecto-pass" className={styles.link}>
               <h4>Protecto Pass</h4>
               <p>A password manager with extra functionality</p>
             </Link>

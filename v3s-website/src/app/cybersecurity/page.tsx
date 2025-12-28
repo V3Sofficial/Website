@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "V3S - Cyber Security",
+  description: "Cybersecurity solutions and information provided by V3S.",
+};
+
 export default function CyberSecurityPage() {
   return (
     <main>
