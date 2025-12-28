@@ -1,5 +1,4 @@
 import Link from "next/link"
-import styles from "./page.module.scss"
 
 export const metadata = {
     title: 'V3S - Legal',
@@ -8,15 +7,15 @@ export const metadata = {
 
 export default function LegalPage() {
     return (
-        <main className={styles.main}>
+        <main>
             <h1> Website </h1>
-            <h2 className={styles.heading}> General </h2>
+            <h2> General </h2>
             <p>
                 This Website itself does not use Cookies and / or tracking to track you.
                 However, the Hoster of the Website and / or provider may do that.
                 Those privacy policies are here to find:
             </p>
-            <ul className={styles.webPrivacyList}>
+            <ul>
                 <li>
                     <a href="https://vercel.com/legal/privacy-policy">Hoster</a>
                 </li>
