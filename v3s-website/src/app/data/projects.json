@@ -1,0 +1,100 @@
+{
+  "projects": {
+    "types": {
+      "apps": {
+        "name": "Apps",
+        "content": {
+          "protecto-pass": {
+            "type-ready": [],
+            "type-goal": [
+              "mobile",
+              "desktop"
+            ],
+            "platforms-ready": [],
+            "platforms-goal": [
+              "ios",
+              "macos"
+            ],
+            "languages": [
+              "Swift"
+            ],
+            "frameworks": [
+              "SwiftUI"
+            ],
+            "name": "Protecto Pass",
+            "description": "The one and only simple, secure and intuitive Password Safe to safely store your Passwords, Keys, and confidential data and documents",
+            "features": [
+              "Securely store your password",
+              "Sync between devices",
+              "Use different encryption algorithms",
+              "Store in different ways",
+              "Encrypt Pictures and Documents",
+              "Organize your database with folders",
+              "Separate different data with multiple database"
+            ],
+            "connection": {
+              "repo": "https://github.com/V3Sofficial/Protecto-Pass",
+              "playstore": null,
+              "appstore": null,
+              "fdroid": null,
+              "pubdev": null,
+              "youtrack": null
+            },
+            "first-version-released": false,
+            "activeSupport": true
+          }
+        }
+      },
+      "plugins": {
+        "name": "Plugins",
+        "content": {
+          "native_encryption": {
+            "type-ready": [],
+            "type-goal": [
+              "desktop",
+              "mobile",
+              "web"
+            ],
+            "platforms-ready": [],
+            "platforms-goal": [
+              "ios",
+              "android",
+              "macos",
+              "windows",
+              "linux"
+            ],
+            "languages": [
+              "dart",
+              "kotlin",
+              "swift"
+            ],
+            "frameworks": [
+              "flutter"
+            ],
+            "name": "Native Encryption",
+            "description": "Use native system encryption in your Flutter App",
+            "features": [],
+            "connection": {
+              "repo": "https://github.com/jules-media/native_encryption",
+              "playstore": null,
+              "appstore": null,
+              "fdroid": null,
+              "pubdev": "https://pub.dev/packages/native_encryption",
+              "youtrack": null
+            },
+            "first-version-released": true,
+            "activeSupport": false
+          }
+        }
+      },
+      "packages": {
+        "name": "Packages",
+        "content": {}
+      },
+      "command_line_tools": {
+        "name": "Command Line Tools",
+        "content": {}
+      }
+    }
+  }
+}
