@@ -1,6 +1,9 @@
+import Link from "next/link";
 import getProjects from "../../data/mapping";
 import Project from "../../objects/project";
-import Link from "next/link";
+import { Card, CardGrid } from "@/components/Card";
+import { Section, SectionHeader } from "@/components/Section";
+import { TagList } from "@/components/Tag";
 
 export default async function ProjectPage({
     params,
@@ -14,107 +17,95 @@ export default async function ProjectPage({
     if (!project) {
         return (
             <main>
-                <h1>Project Not Found</h1>
-                <p>The project you are looking for does not exist.</p>
+                <section className="section">
+                    <div className="section-header">
+                        <p className="eyebrow">Not Found</p>
+                        <h1>Projekt nicht gefunden</h1>
+                        <p className="section-subtitle">Das angeforderte Produkt ist nicht verfügbar.</p>
+                    </div>
+                    <Link className="button" href="/personal">
+                        Zuruck zur Ubersicht
+                    </Link>
+                </section>
             </main>
         );
     } else {
         return (
             <main>
-                <h1>{project.name}</h1>
-                <p>{project.description}</p>
-                <h2>General</h2>
-                <ul>
-                    <li>
-                        <ul>{project.activeSupport ? <p>Active</p> : <p>Inactive</p>}</ul>
-                        <ul>{project.firstVersionReleased ? <p>Published</p> : <p>Still in Development</p>}</ul>
-                        <h3>Ready on</h3>
-                        {project.typeImplemented.length == 0 ?
-                            <p>No types ready yet</p>
-                            :
-                            <ul>
-                                {project.typeImplemented.map((type, index) => (
-                                    <li key={index}>&#x2022; {type}</li>
-                                ))}
-                            </ul>
-                        }
-                    </li>
-                    <li>
-                        <h3>Intended on</h3>
-                        <ul>
-                            {project.typeGoal.map((type, index) => (
-                                <li key={index}>&#x2022; {type}</li>
-                            ))}
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Platforms ready</h3>
-                        {project.platformsReady.length == 0 ?
-                            <p>No platforms ready yet</p>
-                            :
-                            <ul>
-                                {project.platformsReady.map((platform, index) => (
-                                    <li key={index}>&#x2022; {platform}</li>
-                                ))}
-                            </ul>
-                        }
-                    </li>
-                    <li>
-                        <h3>Intended platforms</h3>
-                        <ul>
-                            {project.platformsGoal.map((platform, index) => (
-                                <li key={index}>&#x2022; {platform}</li>
-                            ))}
-                        </ul>
-                    </li>
-                </ul>
-                <h2>Features</h2>
-                <ul>
-                    {project.features.map((feature, index) => (
-                        <li key={index}>&#x2022; {feature}</li>
-                    ))}
-                </ul>
-                <h2>Technologies</h2>
-                <p>Technologies used in development of this project</p>
-                <ul>
-                    <li>
-                        <h3>Languages</h3>
-                        {project.languages.length == 0 ?
-                            <p>No Language provided</p>
-                            :
-                            <ul>
-                                {project.languages.map((language, index) => (
-                                    <li key={index}>&#x2022; {language}</li>
-                                ))}
-                            </ul>
-                        }
-                    </li>
-                    <li>
-                        <h3>Frameworks</h3>
-                        {project.frameworks.length == 0 ?
-                            <p>No Frameworks used</p>
-                            :
-                            <ul>
-                                {project.frameworks.map((framework, index) => (
-                                    <li key={index}>&#x2022; {framework}</li>
-                                ))}
-                            </ul>
-                        }
-                    </li>
-                </ul>
-                <div>
-                    <h2>Connection</h2>
-                    <ul>
-                        {<ul>
-                            {Array.from(project.connection.getActive().entries()).map(([key, value]) => (
-                                <li key={key}>
-                                    <Link href={value}>{key}</Link>
-                                </li>
-                            ))}
-                        </ul>
-                        }
+                <Section>
+                    <SectionHeader
+                        eyebrow="Private Security Product"
+                        title={project.name}
+                        subtitle={project.description}
+                        as="h1"
+                    />
+                    <CardGrid>
+                        <Card>
+                            <h3>Status</h3>
+                            <p>{project.activeSupport ? "Aktiver Support" : "Support pausiert"}</p>
+                            <p>{project.firstVersionReleased ? "Bereits verfugbar" : "In Entwicklung"}</p>
+                            <h4>Bereit fur</h4>
+                            <TagList items={project.typeImplemented} />
+                        </Card>
+                        <Card>
+                            <h3>Roadmap</h3>
+                            <p>Geplante Zielumgebungen</p>
+                            <TagList items={project.typeGoal} />
+                            <h4>Plattformen</h4>
+                            <TagList items={project.platformsGoal} />
+                        </Card>
+                        <Card>
+                            <h3>Plattformen verfugbar</h3>
+                            <TagList items={project.platformsReady} />
+                        </Card>
+                    </CardGrid>
+                </Section>
+
+                <Section>
+                    <SectionHeader
+                        eyebrow="Capabilities"
+                        title="Funktionsumfang"
+                        subtitle="Sicherheitsfeatures und Kernfunktionen des Produkts."
+                    />
+                    <Card>
+                        <TagList items={project.features} />
+                    </Card>
+                </Section>
+
+                <Section>
+                    <SectionHeader
+                        eyebrow="Technologien"
+                        title="Technischer Stack"
+                        subtitle="Sprachen und Frameworks, die im Produkt eingesetzt werden."
+                    />
+                    <CardGrid>
+                        <Card>
+                            <h3>Languages</h3>
+                            <TagList items={project.languages} />
+                        </Card>
+                        <Card>
+                            <h3>Frameworks</h3>
+                            <TagList items={project.frameworks} />
+                        </Card>
+                    </CardGrid>
+                </Section>
+
+                <Section className="callout">
+                    <SectionHeader
+                        eyebrow="Connection"
+                        title="Produktlinks"
+                        subtitle="Offizielle Ressourcen und Repositories."
+                    />
+                    <ul className="list-clean">
+                        {Array.from(project.connection.getActive().entries()).map(([key, value]) => (
+                            <li key={key}>
+                                <Link className="button secondary" href={value}>
+                                    {key}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
-                </div>
+                </Section>
             </main>
         );
     }

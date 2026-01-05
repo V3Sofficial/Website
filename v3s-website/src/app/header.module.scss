@@ -1,35 +1,84 @@
+.header {
+  position: sticky;
+  top: 1rem;
+  z-index: 20;
+}
+
 .nav {
-  width: 90vw;
-  text-align: center;
-  opacity: 0.9;
-  text-decoration: none;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  z-index: 10;
-  position: fixed;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 25px;
-  margin: 0.5rem 5vw;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(11, 26, 42, 0.12);
+  box-shadow: 0 20px 40px rgba(6, 18, 32, 0.12);
+  backdrop-filter: blur(12px);
 }
 
 .logo {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+}
+
+.brand {
+  font-weight: 700;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.tagline {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #5f6b7a;
 }
 
 .links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0;
   margin: 0;
   list-style: none;
+  font-size: 0.9rem;
 }
 
 .links li a {
   text-decoration: none;
-  color: black;
+  color: #1b2b3c;
+  font-weight: 600;
+}
+
+.links li a:hover {
+  color: #0b4fd9;
+}
+
+.cta {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: #1f6feb;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(31, 111, 235, 0.3);
+}
+
+@media (max-width: 860px) {
+  .nav {
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+
+  .cta {
+    justify-self: start;
+  }
 }

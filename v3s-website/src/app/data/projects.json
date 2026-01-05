@@ -4,86 +4,96 @@
       "apps": {
         "name": "Apps",
         "content": {
-          "protecto-pass": {
-            "type-ready": [],
-            "type-goal": [
+          "aegis-vault": {
+            "type-implemented": [
               "Mobile",
               "Desktop"
             ],
-            "platforms-ready": [],
-            "platforms-goal": [
+            "type-goal": [
+              "Web"
+            ],
+            "platforms-ready": [
               "iOS",
-              "macOS"
+              "macOS",
+              "Windows"
+            ],
+            "platforms-goal": [
+              "Android",
+              "Linux"
             ],
             "languages": [
-              "Swift"
+              "Swift",
+              "Kotlin"
             ],
             "frameworks": [
-              "SwiftUI"
+              "SwiftUI",
+              "Compose Multiplatform"
             ],
-            "name": "Protecto Pass",
-            "description": "The one and only simple, secure and intuitive Password Safe to safely store your Passwords, Keys, and confidential data and documents",
+            "name": "V3S Aegis Vault",
+            "description": "Zero-knowledge password and secrets vault for private teams with enterprise-grade cryptography.",
             "features": [
-              "Securely store your password",
-              "Sync between devices",
-              "Use different encryption algorithms",
-              "Store in different ways",
-              "Encrypt Pictures and Documents",
-              "Organize your database with folders",
-              "Separate different data with multiple database"
+              "End-to-end encrypted vaults",
+              "Secure sharing with role-based access",
+              "Emergency access controls",
+              "Security posture monitoring",
+              "Offline-ready secure storage"
             ],
             "connection": {
-              "repo": "https://github.com/V3Sofficial/Protecto-Pass",
+              "repo": "https://github.com/V3Sofficial/aegis-vault",
               "playstore": null,
               "appstore": null,
               "fdroid": null,
               "pubdev": null,
               "youtrack": null
             },
-            "first-version-released": false,
-            "activeSupport": true
+            "first-version-released": true,
+            "active-support": true
           }
         }
       },
       "plugins": {
         "name": "Plugins",
         "content": {
-          "native_encryption": {
-            "type-ready": [],
-            "type-goal": [
-              "Desktop",
-              "Mobile",
+          "signal-lens": {
+            "type-implemented": [
               "Web"
             ],
-            "platforms-ready": [],
+            "type-goal": [
+              "Desktop"
+            ],
+            "platforms-ready": [
+              "Web"
+            ],
             "platforms-goal": [
-              "iOS",
-              "Android",
-              "macOS",
-              "Windows",
-              "Linux"
+              "Linux",
+              "Windows"
             ],
             "languages": [
-              "Dart",
-              "Kotlin",
-              "Swift"
+              "TypeScript",
+              "Python"
             ],
             "frameworks": [
-              "Flutter"
+              "Next.js",
+              "FastAPI"
             ],
-            "name": "Native Encryption",
-            "description": "Use native system encryption in your Flutter App",
-            "features": [],
+            "name": "Signal Lens",
+            "description": "Threat intelligence fusion layer for public-sector partners with real-time alerting.",
+            "features": [
+              "Multi-source intel fusion",
+              "Analyst collaboration flows",
+              "Priority scoring and triage",
+              "Export-ready compliance reports"
+            ],
             "connection": {
-              "repo": "https://github.com/jules-media/native_encryption",
+              "repo": "https://github.com/V3Sofficial/signal-lens",
               "playstore": null,
               "appstore": null,
               "fdroid": null,
-              "pubdev": "https://pub.dev/packages/native_encryption",
+              "pubdev": null,
               "youtrack": null
             },
             "first-version-released": true,
-            "activeSupport": false
+            "active-support": true
           }
         }
       },
